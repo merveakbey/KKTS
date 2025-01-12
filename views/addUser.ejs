@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeni Kullanıcı Ekle</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Yeni Kullanıcı Ekle</h1>
+        <div class="card p-4">
+            <form action="/users/add" method="POST">
+                <div class="mb-3">
+                    <label for="AdSoyad" class="form-label">Ad Soyad:</label>
+                    <input type="text" class="form-control" name="AdSoyad" id="AdSoyad" required placeholder="Ad ve Soyad giriniz">
+                </div>
+                <div class="mb-3">
+                    <label for="TelefonNumarasi" class="form-label">Telefon Numarası:</label>
+                    <input type="text" class="form-control" name="TelefonNumarasi" id="TelefonNumarasi" placeholder="Telefon numarası giriniz">
+                </div>
+                <div class="mb-3">
+                    <label for="Eposta" class="form-label">Eposta:</label>
+                    <input type="email" class="form-control" name="Eposta" id="Eposta" required placeholder="Eposta adresi giriniz">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Ekle</button>
+                    <a href="/users" class="btn btn-secondary">Geri Dön</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödünç İşlemleri</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .back-button {
+            position: fixed;
+            bottom: 50px; /* Alt konum */
+            right: 50px;  /* Sağ konum */
+            z-index: 1000;
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+        .back-button:hover {
+            background-color: #5a6268;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Ödünç İşlemleri</h1>
+        <div class="text-end mb-3">
+            <a href="/borrows/add" class="btn btn-primary">Yeni Ödünç İşlemi</a>
+        </div>
+        <table class="table table-striped table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Kullanıcı</th>
+                    <th>Kitap</th>
+                    <th>Alış Tarihi</th>
+                    <th>İade Tarihi</th>
+                    <th>Gecikme Cezası</th>
+                    <th>İşlemler</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% borrows.forEach(borrow => { %>
+                <tr>
+                    <td><%= borrow.IslemID %></td>
+                    <td><%= borrow.AdSoyad %></td>
+                    <td><%= borrow.KitapAdi %></td>
+                    <td><%= new Date(borrow.AlisTarihi).toLocaleString() %></td>
+                    <td><%= new Date(borrow.IadeTarihi).toLocaleDateString() %></td>
+                    <td>₺<%= parseFloat(borrow.GecikmeCezasi || 0).toFixed(2) %></td>
+                    <td>
+                        <a href="/borrows/edit/<%= borrow.IslemID %>" class="btn btn-warning btn-sm">Düzenle</a>
+                        <a href="/borrows/delete/<%= borrow.IslemID %>" class="btn btn-danger btn-sm">Sil</a>
+                    </td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Sağ Alt Köşe Geri Butonu -->
+    <a href="/index" class="btn btn-secondary back-button">Geri</a>
+</body>
+</html>
