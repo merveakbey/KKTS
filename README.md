@@ -29,7 +29,7 @@ Projede aşağıdaki teknolojiler kullanılmıştır:
 ## Proje Yapısı
 
 ```bash
-KKTS/
+library-management-system/
 │
 ├── config/               # Veritabanı ve yapılandırma dosyaları
 ├── middlewares/          # Yetkilendirme ve kontrol middleware yapıları
