@@ -41,11 +41,9 @@ KKTS/
 ├── package.json          # Proje bağımlılıkları
 └── package-lock.json
 ```
+## Veritabanı İçeriği
 
-Veritabanı İçeriği
-
-Projede oluşturulan veritabanı adı:
-kkts_db
+Projede oluşturulan veritabanı adı: kkts_db
 
 Sistemde temel olarak şu tablolar bulunmaktadır:
 
@@ -56,7 +54,7 @@ OduncAlma
 
 Bu yapı sayesinde kullanıcı bilgileri, kitap bilgileri, kitap kategorileri ve ödünç alma işlemleri birbiriyle ilişkili şekilde tutulmaktadır.
 
-SQL Özellikleri
+## SQL Özellikleri
 
 Bu projede yalnızca tablo yapıları değil, aynı zamanda SQL'in ileri seviye özellikleri de kullanılmıştır.
 
@@ -90,19 +88,16 @@ Kitap yönetimi
 Kitap stoğu takibi
 Gecikme cezası mantığı
 Yetkisiz erişimi engelleyen middleware yapısı
-Kurulum
+
+## Kurulum
 
 Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyebilirsiniz.
 
 1. Projeyi klonlayın
-
 git clone https://github.com/merveakbey/KKTS.git
 cd KKTS
-
 2. Bağımlılıkları yükleyin
-
 npm install
-
 3. Veritabanını oluşturun
 
 MySQL üzerinde kkts_db.sql dosyasını çalıştırarak veritabanını ve gerekli tabloları oluşturun.
@@ -113,16 +108,20 @@ config klasörü içindeki veritabanı bağlantı dosyasını kendi MySQL bilgil
 
 5. Uygulamayı başlatın
 
+```bash
 npm start
-
+```
 Ardından tarayıcıdan aşağıdaki adrese gidin:
-http://localhost:3000
 
-Giriş Sistemi Hakkında
+```bash
+http://localhost:3000
+```
+
+## Giriş Sistemi Hakkında
 
 Uygulamada giriş işlemi admin tablosu üzerinden yapılmaktadır. Kullanıcı giriş yaptıktan sonra oturum başlatılır ve yetkili sayfalara erişim sağlanır. Giriş yapılmadan kullanıcı, korumalı sayfalara erişemez.
 
-Öğrenim Kazanımları
+## Öğrenim Kazanımları
 
 Bu proje sayesinde aşağıdaki konularda uygulamalı deneyim kazanılmıştır:
 
@@ -145,6 +144,7 @@ Detaylı raporlama ekranı
 Kitap arama ve filtreleme
 Gecikmiş kitaplar için otomatik listeleme
 Daha modern ve responsive arayüz tasarımı
-Geliştirici
+
+## Geliştirici
 
 Merve Akbey
