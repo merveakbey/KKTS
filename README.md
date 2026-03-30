@@ -95,8 +95,8 @@ Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları i
 
 1. Projeyi klonlayın
 ```bash
-git clone https://github.com/merveakbey/KKTS.git
-cd KKTS
+git clone https://github.com/merveakbey/library-management-system.git
+cd library-management-system
 ```
 
 2. Bağımlılıkları yükleyin 
