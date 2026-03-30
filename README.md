@@ -1,4 +1,4 @@
-# KKTS - Kütüphane Kitap Takip Sistemi
+# Library Management System
 
 Bu proje, kütüphane içerisindeki kullanıcı, kitap, kategori ve ödünç alma işlemlerinin düzenli bir şekilde yönetilmesini amaçlayan bir **Kütüphane Kitap Takip Sistemi** uygulamasıdır.
 
